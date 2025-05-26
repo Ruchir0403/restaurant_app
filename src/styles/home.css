@@ -16,7 +16,7 @@
   left: -128px;
   width: 1642.311px;
   height: 1297px;
-  object-fit: fill;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -29,8 +29,6 @@
   height: 100%;
   color: white;
   padding-top: 6rem;
-  /* padding-bottom: 10rem; */
-   /* reserve space for bottom buttons */
 }
 
 .hero-overlay h1 {
@@ -77,13 +75,149 @@
   margin: 18px;
   padding: 0.75rem 1.5rem;
   background-color: rgba(255, 255, 255, 0.2);
-  /* border: 1px solid white; */
   color: white;
   border-radius: 10px;
   cursor: pointer;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 24px;
   font-weight: 500;
+}
+
+/* Tablet Styles (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .hero {
+    height: 800px;
+  }
+  
+  .hero-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-overlay {
+    padding: 2rem 1rem;
+    justify-content: space-between;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 64px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  .search-bar {
+    width: 80%;
+    max-width: 400px;
+    height: 80px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-buttons {
+    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .hero-buttons button {
+    width: 220px;
+    height: 80px;
+    margin: 0.5rem;
+    font-size: 18px;
+  }
+}
+
+/* Mobile Styles (768px and below) */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-overlay {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar {
+    width: 90%;
+    max-width: 350px;
+    height: 60px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-buttons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-buttons button {
+    width: 250px;
+    height: 60px;
+    margin: 0.5rem 0;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .hero-overlay {
+    padding: 0.5rem;
+    padding-top: 3rem;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 36px;
+  }
+  
+  .hero-overlay p {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+  
+  .search-bar {
+    width: 95%;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+  
+  .hero-buttons button {
+    width: 90%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 14px;
+  }
 }
 
 .about-us {
@@ -121,6 +255,92 @@
   color: #333;
 }
 
+/* About Us Tablet Styles (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .about-us {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .about-image img {
+    width: 400px;
+    height: 680px;
+  }
+  
+  .about-text {
+    margin-left: 1rem;
+  }
+  
+  .about-text h2 {
+    font-size: 32px;
+  }
+  
+  .about-text p {
+    font-size: 26px;
+  }
+}
+
+/* About Us Mobile Styles (768px and below) */
+@media screen and (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .about-image {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 508/861;
+  }
+  
+  .about-text {
+    order: 2;
+    margin-left: 0;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+  
+  .about-text h2 {
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+/* About Us Small Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .about-us {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-image img {
+    width: 95%;
+    max-width: 300px;
+  }
+  
+  .about-text h2 {
+    font-size: 24px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 .specialty {
   display: flex;
   flex-wrap: wrap;
@@ -143,7 +363,7 @@
 }
 
 .specialty-image {
-  margin-top: 10rem; /* push image down to leave space for heading */
+  margin-top: 10rem; 
 }
 
 .specialty-image img {
@@ -165,6 +385,106 @@
   font-size: 36px;
   font-weight: 500;
   line-height: 1.6;
+}
+
+/* Specialty Tablet Styles (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .specialty {
+    padding: 3rem 2rem;
+  }
+  
+  .specialty-heading {
+    font-size: 40px;
+    top: 1.5rem;
+  }
+  
+  .specialty-image {
+    margin-top: 8rem;
+  }
+  
+  .specialty-image img {
+    width: 500px;
+    height: 890px;
+  }
+  
+  .specialty-text {
+    margin-left: 2rem;
+    margin-top: 20rem;
+    max-width: 400px;
+  }
+  
+  .specialty-text p {
+    font-size: 28px;
+  }
+}
+
+/* Specialty Mobile Styles (768px and below) */
+@media screen and (max-width: 768px) {
+  .specialty {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .specialty-heading {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+  
+  .specialty-image {
+    margin-top: 0;
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .specialty-image img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 712/1266;
+  }
+  
+  .specialty-text {
+    order: 2;
+    margin-left: 0;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+  
+  .specialty-text p {
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Specialty Small Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .specialty {
+    padding: 1.5rem 1rem;
+  }
+  
+  .specialty-heading {
+    font-size: 26px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .specialty-image img {
+    width: 95%;
+    max-width: 320px;
+  }
+  
+  .specialty-text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
 .menu-section {
@@ -232,6 +552,106 @@
 
 .menu-card-content button:hover {
   background-color: #405d37;
+}
+
+/* Menu Section Tablet Styles (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .menu-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .menu-section h2 {
+    font-size: 40px;
+    margin-bottom: 4rem;
+  }
+  
+  .menu-cards {
+    gap: 1.5rem;
+  }
+  
+  .menu-card {
+    width: 300px;
+    height: 420px;
+  }
+  
+  .menu-card-content h3 {
+    font-size: 18px;
+  }
+  
+  .menu-card-content button {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Menu Section Mobile Styles (768px and below) */
+@media screen and (max-width: 768px) {
+  .menu-section {
+    padding: 2rem 1rem;
+  }
+  
+  .menu-section h2 {
+    font-size: 32px;
+    margin-bottom: 3rem;
+  }
+  
+  .menu-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .menu-card {
+    width: 90%;
+    max-width: 320px;
+    height: 400px;
+  }
+  
+  .menu-card-content {
+    padding: 0.8rem;
+  }
+  
+  .menu-card-content h3 {
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .menu-card-content button {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Menu Section Small Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .menu-section {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .menu-section h2 {
+    font-size: 26px;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-card {
+    width: 95%;
+    max-width: 280px;
+    height: 350px;
+  }
+  
+  .menu-card-content {
+    padding: 0.6rem;
+  }
+  
+  .menu-card-content h3 {
+    font-size: 16px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .menu-card-content button {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
 }
 
 .special-offer {
